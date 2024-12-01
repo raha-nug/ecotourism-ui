@@ -1,5 +1,5 @@
 // import node module libraries
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 import Link from "next/link";
 import { Container, Col, Row } from "react-bootstrap";
 
@@ -13,6 +13,14 @@ import { ActiveProjects, Teams, TasksPerformance } from "../sub-components";
 import ProjectsStatsData from "../data/dashboard/ProjectsStatsData";
 
 const Home = () => {
+  const [token, setToken] = useState("");
+
+  useEffect(() => {
+    // Ambil token dari sessionStorage saat komponen dimuat
+    const savedToken = sessionStorage.getItem("token");
+    setToken(savedToken || "Token tidak ditemukan");
+  }, []);
+  console.log(token);
   return (
     <Fragment>
       <div className="bg-primary pt-10 pb-21"></div>

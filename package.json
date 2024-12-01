@@ -11,7 +11,9 @@
   "dependencies": {
     "@vercel/analytics": "^1.4.1",
     "apexcharts": "^4.1.0",
+    "axios": "^1.7.8",
     "bootstrap": "^5.3.3",
+    "js-cookie": "^3.0.5",
     "next": "15.0.3",
     "next-seo": "^6.6.0",
     "prism-react-renderer": "^2.4.0",
